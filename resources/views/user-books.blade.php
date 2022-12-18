@@ -1,7 +1,8 @@
 @extends('partials.layout')
 @section('content')
 
-@include('auth.register-wrapper')
+@include('partials.user-books-table')
+
 
 
 @include('partials.footer')

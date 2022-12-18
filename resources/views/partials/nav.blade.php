@@ -21,30 +21,34 @@
 
         <!--  Main navigation  -->
         <ul class="main-nav nav navbar-nav navbar-right">
-            <li><a href="#home">Главная</a></li>
-            <li><a href="#about">Услуги</a></li>
-            <li><a href="#portfolio">Портфолио</a></li>
-            <li><a href="#pricing">Цены</a></li>
-            <li><a href="#blog">Новости</a></li>
-            <li><a href="#contact">Контакты</a></li>
-            <li><a href="booking.php">Бронировать</a></li>
+            <li><a href="/#home">Главная</a></li>
+            <li><a href="/#about">Услуги</a></li>
+            <li><a href="/#portfolio">Портфолио</a></li>
+            <li><a href="/#pricing">Цены</a></li>
+            <li><a href="/#blog">Новости</a></li>
+            <li><a href="/#contact">Контакты</a></li>
+            <li><a href="{{ route('booking.index') }}">Бронировать</a></li>
 
-            <li><a href="users.php">Users</a></li>
-            <li><a href="emails.php">Emails</a></li>
+            <li><a href="{{ route('user.index') }}">Users</a></li>
 
             @if(Route::has('login'))
                 @auth
-                    <li class="has-dropdown open-drop"><a href="{{ url('/dashboard') }}">Профиль</a>
+                    <li class="has-dropdown open-drop"><a href="{{ url('/profile') }}">Профиль</a>
                         <ul class="dropdown">
-                            <li><a href="logout.php">Выход</a></li>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+
+                                <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    this.closest('form').submit();">Выход</a></li>
+                            </form>
+
+
                         </ul>
                     </li>
                 @else
-                    <li class="has-dropdown open-drop"><a href="{{ route('login') }}">Вход</a>
+                    <li><a href="{{ route('login') }}">Вход</a>
                         @if(Route::has('register'))
-                            <ul class="dropdown">
                                 <li><a href="{{ route('register') }}">Регистрация</a></li>
-                            </ul>
                         @endif
                     </li>
                 @endauth

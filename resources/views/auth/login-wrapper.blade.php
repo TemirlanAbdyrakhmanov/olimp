@@ -43,11 +43,9 @@
                                 </div>
                                 <br>
                                 <div class="row">
-                                    <div class="col-md-4 col-md-offset-5 col-xs-4 col-xs-offset-5">
+                                    <div class="col-md-4 col-md-offset-4 col-xs-4 col-xs-offset-5">
                                         <div class="form-group">
-                                            <x-primary-button class="ml-3">
-                                                {{ __('Log in') }}
-                                            </x-primary-button>
+                                <input type="submit" style="background: #273a50 ;" class="btn btn-success" value="Войти" name="submit">
                                         </div>
                                     </div>
                                 </div>

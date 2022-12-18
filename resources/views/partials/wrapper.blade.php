@@ -16,7 +16,7 @@
                     </p>
                     <p class="white-text">Отличное освещение, место для парковки
                     </p>
-                    <a href="booking.php" class="white-btn">Бронировать</a>
+                    <a href="{{ route('booking.index') }}" class="white-btn">Бронировать</a>
                     <a href="#about" class="main-btn">Подробнее</a>
                 </div>
             </div>

@@ -11,7 +11,7 @@
 
                 <!-- footer logo -->
                 <div class="footer-logo">
-                    <a href="index.php"><img src="img/logo-white.png" alt="logo"></a>
+                    <a href="/"><img src="img/logo-white.png" alt="logo"></a>
                 </div>
                 <!-- /footer logo -->
 
