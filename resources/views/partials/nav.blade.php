@@ -21,34 +21,36 @@
 
         <!--  Main navigation  -->
         <ul class="main-nav nav navbar-nav navbar-right">
-            <li><a href="/#home">Главная</a></li>
-            <li><a href="/#about">Услуги</a></li>
-            <li><a href="/#portfolio">Портфолио</a></li>
-            <li><a href="/#pricing">Цены</a></li>
-            <li><a href="/#blog">Новости</a></li>
-            <li><a href="/#contact">Контакты</a></li>
-            <li><a href="{{ route('booking.index') }}">Бронировать</a></li>
-
-            <li><a href="{{ route('user.index') }}">Users</a></li>
-
+            <li><a href="/#home">Home</a></li>
+            <li><a href="/#about">Services</a></li>
+            <li><a href="/#portfolio">Portfolio</a></li>
+            <li><a href="/#pricing">Prices</a></li>
+            <li><a href="/#blog">News</a></li>
+            <li><a href="/#contact">Contact us</a></li>
+            <li><a href="{{ route('booking.index') }}">Booking</a></li>
+           
             @if(Route::has('login'))
                 @auth
-                    <li class="has-dropdown open-drop"><a href="{{ url('/profile') }}">Профиль</a>
-                        <ul class="dropdown">
-                            <form method="POST" action="{{ route('logout') }}">
-                                @csrf
+                    @if(auth()->user()->is_admin == 1)
+                    <li><a href="{{ route('user.index') }}">Users</a></li>
+                    @endif
+                    <li><a href="{{ url('/profile') }}">Profile</a></li>
+                        
+                           
 
-                                <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                    this.closest('form').submit();">Выход</a></li>
-                            </form>
+                                <li> <form method="POST" action="{{ route('logout') }}">
+                                @csrf<a href="{{ route('logout') }}" class="text-grey" onclick="event.preventDefault();
+                                    this.closest('form').submit();">Log Out</a>
+                                    </form></li>
+                            
 
 
-                        </ul>
-                    </li>
+                        
+                    
                 @else
-                    <li><a href="{{ route('login') }}">Вход</a>
+                    <li><a href="{{ route('login') }}">Sign in</a>
                         @if(Route::has('register'))
-                                <li><a href="{{ route('register') }}">Регистрация</a></li>
+                                <li><a href="{{ route('register') }}">Register</a></li>
                         @endif
                     </li>
                 @endauth

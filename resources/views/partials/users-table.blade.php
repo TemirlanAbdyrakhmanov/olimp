@@ -9,24 +9,24 @@
             <table class="table table-striped table-responsive">
                 <thead>
                 <tr>
-                    <h3 style="display: inline-block">Пользователи</h3> &nbsp
+                    <h3 style="display: inline-block">Users</h3> &nbsp
                     <div class="btn-success count">{{ count($users) }}</div>
                 </tr>
                 <tr>
                     <th>#</th>
-                    <th>Имя</th>
+                    <th>Name</th>
                     <th>Email</th>
-                    <th>Телефон</th>
-                    <th>Заказы</th>
+                    <th>Phone</th>
+                    <th>Books</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <th></th>
-                    <th>Все заказы</th>
+                    <th>All Booking List</th>
                     <th></th>
                     <th></th>
-                    <th><a href="{{ route('books') }}">Посмотреть</a></th>
+                    <th><a href="{{ route('books') }}">View</a></th>
                 </tr>
                 @foreach($users as $r=>$u)
 
@@ -35,7 +35,7 @@
                         <td>{{ $u['name'] }}</td>
                         <td>{{ $u['email'] }}</td>
                         <td>{{ $u['phone'] }}</td>
-                        <td><a href="{{ route('user.books', $u->id) }}">Посмотреть</a></td>
+                        <td><a href="{{ route('user.books', $u->id) }}">View</a></td>
                     </tr>
 
               @endforeach

@@ -9,15 +9,15 @@
             <!-- home content -->
             <div class="col-md-10 col-md-offset-1">
                 <div class="home-content">
-                    <h2 class="white-text">Приглашаем всех любителей спорта</h2>
-                    <p class="white-text">Два крытых мини-футбольных поля с искусственным покрытием европейского качества
+                    <h2 class="white-text">WE INVITE ALL SPORTS Fans</h2>
+                    <p class="white-text">Two indoor futsal fields with European quality artificial turf
                     </p>
-                    <p class="white-text">Тренажерный зал, баня, намазкана
+                    <p class="white-text">Gym, Sauna, Praying Room
                     </p>
-                    <p class="white-text">Отличное освещение, место для парковки
+                    <p class="white-text">Big parking area for all clients
                     </p>
-                    <a href="{{ route('booking.index') }}" class="white-btn">Бронировать</a>
-                    <a href="#about" class="main-btn">Подробнее</a>
+                    <a href="{{ route('booking.index') }}" class="white-btn">Book NOW</a>
+                    <a href="#about" class="main-btn">Know more...</a>
                 </div>
             </div>
             <!-- /home content -->

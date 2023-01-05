@@ -9,19 +9,19 @@
 
             <!-- Section header -->
             <div class="section-header text-center">
-                <h2 class="title">ВИДЫ УСЛУГ</h2>
+                <h2 class="title">Types Providing Services</h2>
             </div>
             <!-- /Section header -->
 
             <!-- about -->
             <div class="col-md-4">
                 <div class="about">
-                    <img class="icon" src="img/футбольный%20мяч.svg" alt="">
-                    <h3>Футбольное поле</h3>
+                    <img class="icon" src="img/FutsalBall.svg" alt="">
+                    <h3>Futsal Field</h3>
                     <ul class="services">
-                        <li>  Искусственное покрытие европейского качества</li>
-                        <li>  Предоставляем качественные мячи</li>
-                        <li>  Поля крытые навесом </li><br>
+                        <li>  European quality artificial turf</li>
+                        <li>  We provide high-quality balls</li>
+                        <li>  Canopy fields </li><br>
                     </ul>
                 </div>
             </div>
@@ -30,11 +30,11 @@
             <!-- about -->
             <div class="col-md-4">
                 <div class="about">
-                    <img class="icon" src="img/Тренажерный%20зал.svg" alt="">
-                    <h3>Тренажерный зал</h3>
+                    <img class="icon" src="img/GYM.svg" alt="">
+                    <h3>GYM</h3>
                     <ul class="services">
-                        <li>  Маты</li>
-                        <li>  Спортивное оборудование</li>	<br>
+                        <li>  Wresling mat</li>
+                        <li>  Various types of equipment</li>	<br>
                     </ul>
                 </div>
             </div>
@@ -43,12 +43,11 @@
             <!-- about -->
             <div class="col-md-4">
                 <div class="about">
-                    <img class="icon" src="img/баня.svg" alt="">
-                    <h3>Баня</h3>
+                    <img class="icon" src="img/Sauna.svg" alt="">
+                    <h3>Sauna</h3>
                     <ul class="services">
-                        <li>  Баня с паром</li>
-                        <li>  Душ с горячей водой</li>
-                        <li>  Просторная раздевалка</li><br>
+                        <li>  Relaxation jacuzzi</li>
+                        <li>  Spacious dressing room</li><br>
                     </ul>
                 </div>
             </div>

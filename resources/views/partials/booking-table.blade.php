@@ -20,7 +20,7 @@
                 @endfor
             </tr>
             <tr id="dates">
-                <th>Время</th>
+                <th>Time</th>
                 @for($w = 0; $w < count($week[$i]); $w++)
 
                 <th colspan="2" style="background: {{ $color[$w] }}">{{ $week[$i][$w] }}</th>
@@ -56,11 +56,13 @@
                                 ->where('to_time', $time_array[$t+1])
                                 ->where('book_date', date("Y-m-d", strtotime($week[$i][$w])))
                                 ->first();
+
+                               
                     @endphp
                 <td @if(isset($field1)) style="background: #ec5964" @endif>
                     <div id="div{{ $w.$t.'1' }}" style="margin-top: 25%;">
                         @if(isset($field1))
-                        <span id="{{ $w.$t }}1">Занято</span>
+                        <span id="{{ $w.$t }}1">Booked</span>
                         @if(auth()->user())
                             @if(auth()->user()->id == $field1->user_id)
                                 @if(strtotime($field1->date) == strtotime("today"))
@@ -69,7 +71,7 @@
                                         @csrf
                                         @method('delete')
                                     <input type="submit"
-                                        class="btn delete-book btn-default" title="Отменить" value="Отмена"/>
+                                        class="btn delete-book btn-default" title="Cancel booking" value="Cancel"/>
                                     </form>
                                     @endif
                                 @elseif(strtotime($field1->date) >= strtotime("today"))
@@ -77,7 +79,7 @@
                                     @csrf
                                     @method('delete')
                                 <input type="submit"
-                                    class="btn delete-book btn-default" title="Отменить" value="Отмена"/>
+                                    class="btn delete-book btn-default" title="Cancel booking" value="Cancel"/>
                                 </form>
 
                         @endif
@@ -85,11 +87,11 @@
                         @endif
                         @else
                         @if(strtotime($week[$i][$w]) > strtotime("today"))
-                           <input onclick="book_field(1, {{ $w }}, {{ $t }}, '{{ $week[$i][$w] }}', '{{ $time_array[$t] }}', '{{ $time_array[$t+1] }}', {{ auth()->user()->id }})" type="button" value="Бронь" class="btn btn-primary text-black">
+                           <input onclick="book_field(1, {{ $w }}, {{ $t }}, '{{ $week[$i][$w] }}', '{{ $time_array[$t] }}', '{{ $time_array[$t+1] }}', {{ auth()->user()->id }})" type="button" value="Book" class="btn btn-primary text-black">
                         @elseif(strtotime($week[$i][$w]) == strtotime("today") && strtotime($time_array[$t]) >= strtotime("now"))
-                           <input onclick="book_field(1, {{ $w }}, {{ $t }}, '{{ $week[$i][$w] }}', '{{ $time_array[$t] }}', '{{ $time_array[$t+1] }}', {{ auth()->user()->id }})" type="button" value="Бронь" class="btn btn-primary text-black">
+                           <input onclick="book_field(1, {{ $w }}, {{ $t }}, '{{ $week[$i][$w] }}', '{{ $time_array[$t] }}', '{{ $time_array[$t+1] }}', {{ auth()->user()->id }})" type="button" value="Book" class="btn btn-primary text-black">
                         @else
-                           <input onclick="book_field(1, {{ $w }}, {{ $t }}, '{{ $week[$i][$w] }}', '{{ $time_array[$t] }}', '{{ $time_array[$t+1] }}', {{ auth()->user()->id }})" type="button" value="Бронь" class="btn btn-default" disabled>
+                           <input onclick="book_field(1, {{ $w }}, {{ $t }}, '{{ $week[$i][$w] }}', '{{ $time_array[$t] }}', '{{ $time_array[$t+1] }}', {{ auth()->user()->id }})" type="button" value="Book" class="btn btn-default" disabled>
                         @endif
                     @endif
                 </div>
@@ -98,25 +100,25 @@
                 <td @if(isset($field2)) style="background: #ec5964" @endif>
                     <div id="div{{ $w.$t.'2' }}" style="margin-top: 25%;">
                         @if(isset($field2))
-                        <span id="{{ $w.$t }}2">Занято</span>
+                        <span id="{{ $w.$t }}2">Booked</span>
                         @if(auth()->user())
                             @if(auth()->user()->id == $field2->user_id)
                                 @if(strtotime($field2->date) == strtotime("today"))
                                     @if(strtotime($field2->from_time) >= strtotime("2 hours"))
 
-                                    <form method="DELETE" action="{{ route('booking.destroy', $field2->id) }}">
+                                    <form method="POST" action="{{ route('booking.destroy', $field2->id) }}">
                                         @csrf
                                         @method('delete')
                                     <input type="submit"
-                                        class="btn delete-book btn-default" title="Отменить" value="Отмена"/>
+                                        class="btn delete-book btn-default" title="Cancel booking" value="Cancel"/>
                                     </form>
                         @endif
                                 @elseif(strtotime($field2->date) >= strtotime("today"))
-                                <form method="DELETE" action="{{ route('booking.destroy', $field2->id) }}">
+                                <form method="POST" action="{{ route('booking.destroy', $field2->id) }}">
                                     @csrf
                                     @method('delete')
                                 <input type="submit"
-                                    class="btn delete-book btn-default" title="Отменить" value="Отмена"/>
+                                    class="btn delete-book btn-default" title="Cancel booking" value="Cancel"/>
                                 </form>
 
                         @endif
@@ -126,14 +128,15 @@
 
                     @else
                         @if(strtotime($week[$i][$w]) > strtotime("today"))
-                            <input onclick="book_field(2, {{ $w }}, {{ $t }}, '{{ $week[$i][$w] }}', '{{ $time_array[$t] }}', '{{ $time_array[$t+1] }}', {{ auth()->user()->id }})" type="button" value="Бронь" class="btn btn-primary text-black">
+                            <input onclick="book_field(2, {{ $w }}, {{ $t }}, '{{ $week[$i][$w] }}', '{{ $time_array[$t] }}', '{{ $time_array[$t+1] }}', {{ auth()->user()->id }})" type="button" value="Book" class="btn btn-primary text-black">
                         @elseif(strtotime($week[$i][$w]) == strtotime("today") && strtotime($time_array[$t]) >= strtotime("now"))
-                            <input onclick="book_field(2, {{ $w }}, {{ $t }}, '{{ $week[$i][$w] }}', '{{ $time_array[$t] }}', '{{ $time_array[$t+1] }}', {{ auth()->user()->id }})" type="button" value="Бронь" class="btn btn-primary text-black">
+                            <input onclick="book_field(2, {{ $w }}, {{ $t }}, '{{ $week[$i][$w] }}', '{{ $time_array[$t] }}', '{{ $time_array[$t+1] }}', {{ auth()->user()->id }})" type="button" value="Book" class="btn btn-primary text-black">
                         @else
-                            <input onclick="book_field(2, {{ $w }}, {{ $t }}, '{{ $week[$i][$w] }}', '{{ $time_array[$t] }}', '{{ $time_array[$t+1] }}', {{ auth()->user()->id }})" type="button" value="Бронь" class="btn btn-default" disabled>
+                            <input onclick="book_field(2, {{ $w }}, {{ $t }}, '{{ $week[$i][$w] }}', '{{ $time_array[$t] }}', '{{ $time_array[$t+1] }}', {{ auth()->user()->id }})" type="button" value="Book" class="btn btn-default" disabled>
                         @endif
                     @endif</div>
                 </td>
+
 
                 @endfor
             </tr>
@@ -163,7 +166,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title text-center">Бронировать</h4>
+                <h4 class="modal-title text-center">Reserve</h4>
             </div>
             <div class="modal-body">
                 @php
@@ -171,7 +174,7 @@
                 @endphp
                 @if(!auth()->user() || !$is_logged_in['is_logged_in'])
 
-                    <a href={{ route('register') }}>Зарегистрируйтесь</a> или <a href={{ route('login') }}>войдите</a> , чтобы воспользоваться функцией бронирования.
+                    <a href={{ route('register') }}>Please, register first</a> или <a href={{ route('login') }}>Sign in</a> , to use the booking function.
                 @elseif($_SESSION['user_type'] == '1')
 
                 <div class="row">
@@ -184,22 +187,22 @@
                             <input type="hidden" name="i" value="<?=$i;?>"/>
                             <input type="hidden" name="time_from" id="time_from"/>
                             <input type="hidden" name="time_to" id="time_to"/>
-                            <label for="name">Имя</label><input type="text" name="name" id="name"/><br>
-                            <label for="phone">Телефон</label><input class="form-control" type="text" name="phone" id="phone"/>
+                            <label for="name">Name</label><input type="text" name="name" id="name"/><br>
+                            <label for="phone">Phone</label><input class="form-control" type="text" name="phone" id="phone"/>
                         </form>
                     </div>
                 </div>
 
                 @elseif($_SESSION['is_banned'])
 
-                    Вы заблокированы. Смотрите правила бронирования.
+                    Unfortunately, you are blocked. Please, refer booking rules.
                 @endif
             </div>
             <div class="modal-footer">
                 @if(auth()->user())
                 <button type="button" class="btn btn-primary" id="admin-book" data-dismiss="modal">Бронь</button>
                 @endif
-                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

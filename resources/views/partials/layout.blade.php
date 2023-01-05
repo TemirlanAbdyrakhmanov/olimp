@@ -4,10 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>OLYMP</title>
+        <title>{{ config('app.name', 'Laravel') }}</title>
+        <link rel ="website icon" type="ico"
+        href="images/favicon">
 
         <!-- Fonts -->
-        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <!--<link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">-->
 
         @vite(['resources/css/main.css', 'resources/js/app.js'])
     </head>

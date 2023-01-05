@@ -8,19 +8,19 @@
             <table class="table table-striped table-responsive">
                 <thead>
                 <tr>
-                    <h3 style="display: inline-block">Заказы {{ $user?->name }}</h3> &nbsp
+                    <h3 style="display: inline-block">Booking List {{ $user?->name }}</h3> &nbsp
                     <div class="btn-success count">{{ count($books) }}</div>
                 </tr>
                 <tr>
                     <th>#</th>
                     @if(!isset($user))
-                    <th>Имя</th>
+                    <th>Name</th>
                     @endif
-                    <th>Дата</th>
-                    <th>Время</th>
-                    <th>Поле</th>
-                    <th>Комментарий</th>
-                    <th>Удалить</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Field Number</th>
+                    <th>Comments</th>
+                    <th>Delete</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -39,9 +39,9 @@
 
                         <td>
                            @if($d->field_id == 1)
-                            №1
+                            1st Field
                            @else
-                                №2
+                            2nd Field
                             @endif
                         </td>
 
@@ -53,7 +53,7 @@
                                 @csrf
                                 @method('delete')
                             <input type="submit"
-                                class="btn delete-book btn-default" title="Удалить" value="Удалить"/>
+                                class="btn delete-book btn-default" title="Delete" value="Delete"/>
                             </form>
                         </td>
 

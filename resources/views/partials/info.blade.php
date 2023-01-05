@@ -10,44 +10,41 @@
             <!-- why choose us content -->
             <div class="col-md-6">
                 <div class="section-header">
-                    <h2 class="title">Почему выбирают нас</h2>
+                    <h2 class="title">Why choose us?</h2>
                 </div>
                 <div class="feature">
                     <i class="fa fa-check"></i>
-                    <p>Два крытых мини-футбольных поля с искусственным покрытием европейского качества</p>
+                    <p>Two indoor futsal field</p>
                 </div>
                 <div class="feature">
                     <i class="fa fa-check"></i>
-                    <p>Две раздевалки</p>
+                    <p>The fields are covered with European quality artificial turf</p>
                 </div>
                 <div class="feature">
                     <i class="fa fa-check"></i>
-                    <p>Душ с горячей водой</p>
+                    <p>Four dressing room</p>
                 </div>
                 <div class="feature">
                     <i class="fa fa-check"></i>
-                    <p>Отличное освещение</p>
+                    <p>Hot water shower</p>
                 </div>
                 <div class="feature">
                     <i class="fa fa-check"></i>
-                    <p>Тренажерный зал</p>
+                    <p>Gym</p>
                 </div>
                 <div class="feature">
                     <i class="fa fa-check"></i>
-                    <p>Баня</p>
+                    <p>Sauna</p>
                 </div>
-                <!-- <div class="feature">
-                    <i class="fa fa-check"></i>
-                    <p>Онлайн оплата</p>
-                </div> -->
+
             </div>
             <!-- /why choose us content -->
 
             <!-- About slider -->
             <div class="col-md-5 col-md-offset-1">
                 <div id="about-slider" class="owl-carousel owl-theme">
-                    <img class="img-responsive" src="img/Крытое%20поле%20ОЛИМП.jpg" alt="">
-                    <img class="img-responsive" src="img/Мини%20футбольное%20поле.jpg" alt="">
+                    <img class="img-responsive" src="img/Ball_on_the_line.jpg" alt="">
+                    <!-- <img class="img-responsive" src="img/Gate goal.jpg" alt=""> -->
                     <!-- <img class="img-responsive" src="./img/photo4.jpg" alt=""> -->
                     <!-- <img class="img-responsive" src="./img/photo5.jpg" alt=""> -->
                 </div>
@@ -68,7 +65,7 @@
 <div id="numbers" class="section sm-padding">
 
     <!-- Background Image -->
-    <div class="bg-img" style="background-image: url('img/Футбольное%20поле%20Олимп.jpg');">
+    <div class="bg-img" style="background-image: url('img/Gate%20goal.jpg');">
         <div class="overlay"></div>
     </div>
     <!-- /Background Image -->
@@ -84,7 +81,7 @@
                 <div class="number">
                     <i class="fa fa-users"></i>
                     <h3 class="white-text"><span class="counter">451</span></h3>
-                    <span class="white-text">Счастливых клиентов</span>
+                    <span class="white-text">Regular Clients</span>
                 </div>
             </div>
             <!-- /number -->
@@ -94,7 +91,7 @@
                 <div class="number">
                     <i class="fa fa-trophy"></i>
                     <h3 class="white-text"><span class="counter">12</span></h3>
-                    <span class="white-text">Наград</span>
+                    <span class="white-text">Achievements</span>
                 </div>
             </div>
             <!-- /number -->
@@ -103,8 +100,8 @@
             <div class="col-sm-3 col-xs-6">
                 <div class="number">
                     <i class="fa fa-file"></i>
-                    <h3 class="white-text"><span class="counter">45</span></h3>
-                    <span class="white-text">Проведенных турниров</span>
+                    <h3 class="white-text"><span class="counter">345</span></h3>
+                    <span class="white-text">Held Tournaments</span>
                 </div>
             </div>
             <!-- /number -->
@@ -129,7 +126,7 @@
 
             <!-- Section header -->
             <div class="section-header text-center">
-                <h2 class="title">Прайс Лист</h2>
+                <h2 class="title">Price List</h2>
             </div>
             <!-- /Section header -->
 
@@ -137,9 +134,9 @@
             <div class="col-sm-4">
                 <div class="pricing">
                     <div class="price-head">
-                        <span class="price-title">Школьникам</span>
+                        <span class="price-title">Students</span>
                         <div class="price">
-                            <h3>500<span class="duration">сом / час</span></h3>
+                            <h3>500<span class="duration">som / hour</span></h3>
                         </div>
                     </div>
                     <ul class="price-content">
@@ -148,7 +145,7 @@
                         </li>
                     </ul>
                     <div class="price-btn">
-                        <a href="booking.php" class="outline-btn">Бронируй сейчас</a>
+                        <a href="{{ route('booking.index') }}" class="outline-btn">Book NOW</a>
                     </div>
                 </div>
             </div>
@@ -158,9 +155,9 @@
             <div class="col-sm-4">
                 <div class="pricing">
                     <div class="price-head">
-                        <span class="price-title">Дневное время</span>
+                        <span class="price-title">Day Time</span>
                         <div class="price">
-                            <h3>800<span class="duration">сом / час</span></h3>
+                            <h3>800<span class="duration">som / hour</span></h3>
                         </div>
                     </div>
                     <ul class="price-content">
@@ -169,7 +166,7 @@
                         </li>
                     </ul>
                     <div class="price-btn">
-                        <a href="booking.php" class="outline-btn">Бронируй сейчас</a>
+                        <a href="{{ route('booking.index') }}" class="outline-btn">Book NOW</a>
                     </div>
                 </div>
             </div>
@@ -179,9 +176,9 @@
             <div class="col-sm-4">
                 <div class="pricing">
                     <div class="price-head">
-                        <span class="price-title">Вечернее время</span>
+                        <span class="price-title">Evening Time</span>
                         <div class="price">
-                            <h3>1000<span class="duration">сом / час</span></h3>
+                            <h3>1000<span class="duration">som / hour</span></h3>
                         </div>
                     </div>
                     <ul class="price-content">
@@ -190,7 +187,7 @@
                         </li>
                     </ul>
                     <div class="price-btn">
-                        <a href="booking.php" class="outline-btn">Бронируй сейчас</a>
+                        <a href="{{ route('booking.index') }}" class="outline-btn">Book NOW</a>
                     </div>
                 </div>
             </div>

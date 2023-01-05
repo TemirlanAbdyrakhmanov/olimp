@@ -28,7 +28,7 @@
 
                 <!-- footer copyright -->
                 <div class="footer-copyright">
-                    <p>Copyright © 2018. All Rights Reserved. Designed by <a href="https://www.linkedin.com/in/kanykei-razhapova-b18ba8a1/" target="_blank">Kanykei Razhapova</a></p>
+                    <p>All Rights Reserved. Designed by <a href="https://www.linkedin.com/in/temirlan-abdyrakhmanov-1bb23a198/" target="_blank">Temirlan Abdyrakhmanov</a></p>
                 </div>
                 <!-- /footer copyright -->
 

@@ -12,7 +12,7 @@
             <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1 register">
                 <div class="row">
                     <div class="col-md-12 text-center inner">
-                        <h3>Войти в систему</h3>
+                        <h3>Sign In</h3>
                     </div>
                 </div>
                 <form method="POST" action="{{ route('login') }}">
@@ -45,7 +45,7 @@
                                 <div class="row">
                                     <div class="col-md-4 col-md-offset-4 col-xs-4 col-xs-offset-5">
                                         <div class="form-group">
-                                <input type="submit" style="background: #273a50 ;" class="btn btn-success" value="Войти" name="submit">
+                                <input type="submit" style="background: #273a50 ;" class="btn btn-success" value="Login" name="submit">
                                         </div>
                                     </div>
                                 </div>

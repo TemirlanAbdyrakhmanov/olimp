@@ -25,10 +25,12 @@ function book_field(field, w, t, weekday, time_from, time_to, user_id){
         data: $('#new_record').serialize(),
         success: function (data) {
             console.log(data);
-            $('#div'+w+t+field).parent().css('background','#ec5964');
-            $('#div'+w+t+field).html(
-                '<span id="{{ $w.$t }}2">Занято</span>'
-            );
+            /*$('#div'+w+t+field).parent().css('background','#ec5964');
+            $('#div' + w + t + field).html(
+                '<span id="{{ $w.$t }}2">Booked</span>'
+            );*/
+            alert('You booked successfully!');
+            document.location.reload();
         },
         error: function (data) {
             alert(data);

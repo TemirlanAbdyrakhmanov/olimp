@@ -45,7 +45,7 @@ class BookingController extends Controller
         $week[2] = array();
         $week[3] = array();
         $week[4] = array();
-        $field = "Поле №";
+        $field = "Field-";
         switch ($day_of_week) {
             case 1:
                 array_push($week[0], $today);
@@ -196,7 +196,7 @@ class BookingController extends Controller
             // $db->delete("schedule","id='".$id."'");
             echo '<script>window.location = "booking.php?i=' . $i . '";</script>';
         }
-        $week_days = array("Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье");
+        $week_days = array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday");
         $color = array("#f90c0c", "#0cb90c", "blue", "orange", "yellow", "violet", "#8FCAE8");
         $time_array = array();
         $time_array[] = "08:00:00";

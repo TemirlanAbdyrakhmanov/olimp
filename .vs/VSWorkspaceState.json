@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\database\\factories",
+    "\\database\\migrations",
+    "\\database\\seeders",
+    "\\resources",
+    "\\resources\\views",
+    "\\resources\\views\\partials",
+    "\\resources\\views\\profile"
+  ],
+  "SelectedNode": "\\resources\\views\\partials\\booking-wrapper.blade.php",
+  "PreviewInSolutionExplorer": false
+}

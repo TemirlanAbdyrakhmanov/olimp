@@ -11,35 +11,42 @@
             <div class="col-md-6 col-md-offset-3 register">
             <div class="row">
                 <div class="col-md-12 text-center inner">
-                    <h3>Регистрация</h3>
+                    <h3>Registration</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <form class="form-horizontal" method="post" id="form">
                         <div class="form-group">
-                            <label class="control-label col-md-4" for="name">Имя:</label>
+                            <label class="control-label col-md-4" for="name">Name:</label>
                             <div class="col-md-7">
                                 <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
                             <x-input-error :messages="$errors->get('name')" class="mt-2" /> </div>
 
                         </div>
+                        <!--<div class="form-group">
+                            <label class="control-label col-md-4" for="last_name">Last name:</label>
+                            <div class="col-md-7">
+                                <x-text-input id="last_name" class="block mt-1 w-full" type="text" name="last_name" :value="old('last_name')" required  />
+                            <x-input-error :messages="$errors->get('last_name')" class="mt-2" /> </div>
+
+                        </div>-->
                         <div class="form-group">
                             <label class="control-label col-md-4" for="email">Email:</label>
                             <div class="col-md-7">
                                 <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-                <x-input-error :messages="$errors->get('email')" class="mt-2" />            </div>
+                             <x-input-error :messages="$errors->get('email')" class="mt-2" />   </div>
 
 
                         </div>
-                        <!-- <div class="form-group">
-                            <label class="control-label col-md-4" for="phone">Телефон:</label>
+                        <div class="form-group">
+                            <label class="control-label col-md-4" for="phone">Phone number:</label>
                             <div class="col-md-7">
                                 <input type="text" class="form-control" id="phone" name="phone" >
                             </div>
-                        </div> -->
+                        </div>
                         <div class="form-group">
-                            <label class="control-label col-md-4" for="password">Пароль:</label>
+                            <label class="control-label col-md-4" for="password">Create Password:</label>
                             <div class="col-md-7">
                                 <x-text-input id="password" class="block mt-1 w-full"
                             type="password"
@@ -50,7 +57,7 @@
 
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-4" for="password_confirmation">Подтверждение пароля:</label>
+                            <label class="control-label col-md-4" for="password_confirmation">Confirm Password:</label>
                             <div class="col-md-7">
                                 <x-text-input id="password_confirmation" class="block mt-1 w-full"
                                 type="password"
@@ -63,7 +70,7 @@
                         <div class="form-group">
                             <div class="col-md-offset-4 col-md-6 col-xs-offset-3 col-xs-4">
                                 <br>
-                                <button type="submit" class="btn btn-success" style="background-color: #273a50; background-image: linear-gradient(to bottom,#3d5a7b,#273a50);" id="save" name="save">Сохранить</button>
+                                <button type="submit" class="btn btn-success" style="background-color: #273a50; background-image: linear-gradient(to bottom,#3d5a7b,#273a50);" id="save" name="save">Create Account</button>
                             </div>
                         </div>
                     </form>
